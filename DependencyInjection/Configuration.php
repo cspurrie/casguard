@@ -89,9 +89,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder('cas_guard');
-        $rootNode = $treeBuilder->root('cas_guard');
-        $rootNode
-            ->children()
+        $treeBuilder ->getRootNode() ->children()
                 ->scalarNode('certificate')
                     ->defaultFalse()
                     ->example('certificate path')
